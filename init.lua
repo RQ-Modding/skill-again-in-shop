@@ -1,4 +1,4 @@
-﻿-- Always stock Skill Again (item 306) in Frostbuy after vanilla restock.
+-- Always stock Skill Again (item 306) in Frostbuy after vanilla restock.
 -- Engine wraps Ｔアイテム屋 tail; policy is Lua.
 
 local SKILL_AGAIN = 306
@@ -6,7 +6,7 @@ local SKILL_AGAIN = 306
 rq.log(string.format("Skill Again always in Frostbuy (item %d)", SKILL_AGAIN))
 
 if not rq.shop.install() then
-  error("skill-again-in-shop: rq.shop.install failed (see mods/rqmod.log)")
+  error("skill-again-in-shop: rq.shop.install failed (see logs/rqmod.log)")
 end
 
 rq.shop.on_stock(function()
