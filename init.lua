@@ -1,7 +1,7 @@
 -- Always stock Skill Again (item 306) in Frostbuy after vanilla restock.
 -- Engine wraps Ｔアイテム屋 tail; policy is Lua.
 
-local SKILL_AGAIN = 306
+local SKILL_AGAIN = rq.ids.item.SKILL_AGAIN
 
 rq.log(string.format("Skill Again always in Frostbuy (item %d)", SKILL_AGAIN))
 

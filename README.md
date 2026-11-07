@@ -22,7 +22,7 @@ Binoculars and other mods that add shop stock.
 
 ## Install
 
-Needs [RQ MOD](https://github.com/RQ-Modding/RQ-Mod) with loader **0.2.0** or newer. Extract the
+Needs [RQ MOD](https://github.com/RQ-Modding/RQ-Mod) with loader **1.15.0** or newer. Extract the
 release zip into the game's `mods` folder, so that you have `mods/skill-again-in-shop/mod.json`.
 
 ## How it works
@@ -30,8 +30,8 @@ release zip into the game's `mods` folder, so that you have `mods/skill-again-in
 ```lua
 rq.shop.install()
 rq.shop.on_stock(function()
-  if not rq.shop.in_stock(306) then  -- 306: Skill Again
-    rq.shop.stock(306)
+  if not rq.shop.in_stock(rq.ids.item.SKILL_AGAIN) then  -- 306
+    rq.shop.stock(rq.ids.item.SKILL_AGAIN)
   end
 end)
 ```
