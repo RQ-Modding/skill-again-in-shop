@@ -1,4 +1,5 @@
 {
+  "$schema": "https://rq-modding.github.io/rq-modding-docs/schemas/mod.schema.json",
   "id": "skill-again-in-shop",
   "name": "Skill Again in Shop",
   "author": "Magnum Mods",

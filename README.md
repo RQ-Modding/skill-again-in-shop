@@ -1,31 +1,43 @@
-﻿# skill-again-in-shop
+﻿# Skill Again in Shop
 
-Always stock **Skill Again** (item **306**, Special) in Frostbuy after every shop open restock. Needed so skill respecs (Wichita / Spellblade testing) stay available even after a spent Skill Again is still owned.
+**Skill Again** is always for sale in Frostbuy.
 
-| Vanilla | This mod |
-| --- | --- |
-| Stock 306 only if `Ｉ有無(306,0)==0` (not owned) | After `Ｔアイテム屋`, stock 306 if shop does not already have one |
+## What it changes
 
-## API
+- The game stocks Skill Again (Special) only while you own none, so a spent one you still carry keeps
+  it off the shelf. With this mod, every restock adds one when the shop does not already have it.
+- Handy for trying skill builds again and again.
+
+## Keys and settings
+
+None.
+
+## Saves
+
+The Skill Again items you buy are ordinary game items and stay in the save.
+
+## Works with
+
+Binoculars and other mods that add shop stock.
+
+## Install
+
+Needs [RQ MOD](https://github.com/RQ-Modding/RQ-Mod) with loader **0.2.0** or newer. Extract the
+release zip into the game's `mods` folder, so that you have `mods/skill-again-in-shop/mod.json`.
+
+## How it works
 
 ```lua
 rq.shop.install()
 rq.shop.on_stock(function()
-  if not rq.shop.in_stock(306) then
-    rq.shop.stock(306)  -- Ｔアイテム屋／入荷品
+  if not rq.shop.in_stock(306) then  -- 306: Skill Again
+    rq.shop.stock(306)
   end
 end)
 ```
 
-`stock` is a no-op when a 306 is already existence 6 (store product).
+`on_stock` runs after the game's restock (`Ｔアイテム屋`).
 
-## Needs
+## License
 
-1. Fork with `rq.shop.*` (install + on_stock + in_stock + stock)
-2. `rqmod\apply.ps1` → Magnum Mods only
-
-Local-only git. No remote.
-
-## Test
-
-Clear a dungeon → hub → Frostbuy → Special / Skill Again is listed even if you already own a spent one. Log: `[skill-again-in-shop] stocked Skill Again …` on first restock of a visit when missing.
+MIT, see [LICENSE](LICENSE).
