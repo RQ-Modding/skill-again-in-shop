@@ -2,6 +2,8 @@
 
 **Skill Again** is always for sale in Frostbuy.
 
+<img width="480" height="162" alt="image" src="https://github.com/user-attachments/assets/7b834dd8-26b6-4d43-bdea-0b68f5c4c9ee" />
+
 ## What it changes
 
 - The game stocks Skill Again (Special) only while you own none, so a spent one you still carry keeps
